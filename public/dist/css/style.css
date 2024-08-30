@@ -1,0 +1,65 @@
+:root {
+  --positive: rgb(13, 255, 13);
+  --inactive: rgba(174, 174, 174, 0.938);
+  --primary: rgb(22, 0, 145);
+}
+
+#mainContainer {
+  max-width: 55%;
+  margin-top: 1rem;
+}
+
+#liveAlertPlaceholder {
+  display: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.taskItem #taskItem {
+  width: 2rem;
+  max-width: 2rem;
+}
+
+.content {
+  margin-left: 3rem;
+}
+
+i {
+  margin: 0 0.5rem 0 0.5rem;
+}
+
+li {
+  margin-bottom: 1rem;
+}
+
+.active .fa-check-circle:hover {
+  color: var(--positive);
+}
+.active .fa-trash:hover {
+  color: red;
+}
+
+.inactive span {
+  color: var(--inactive);
+  text-decoration: line-through;
+  animation-name: striked;
+  animation-duration: 2s;
+  animation-delay: -1s;
+}
+.inactive i {
+  color: var(--inactive);
+  animation-name: striked;
+  animation-duration: 2s;
+  animation-delay: -1s;
+}
+
+@keyframes striked {
+  50% {
+    color: gray;
+  }
+  75% {
+    color: lightgray;
+  }
+}/*# sourceMappingURL=style.css.map */
