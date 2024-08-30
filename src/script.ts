@@ -32,7 +32,7 @@ addbutton.addEventListener('click', addTask)
 
 function reset(): void {
   addInput.value = ''
-  console.log(checkButton)
+  // console.log(checkButton)
 }
 
 function getTasks(): number {
