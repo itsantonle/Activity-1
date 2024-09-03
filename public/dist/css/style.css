@@ -2,11 +2,25 @@
   --positive: rgb(13, 255, 13);
   --inactive: rgba(174, 174, 174, 0.938);
   --primary: rgb(22, 0, 145);
+  --hover: rgb(53, 38, 172);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: url("https://png.pngtree.com/thumb_back/fh260/background/20200808/pngtree-jungle-background-with-pine-trees-at-sunset-image_387085.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 #mainContainer {
   max-width: 55%;
-  margin-top: 1rem;
+  height: 600px;
+  margin-top: 5rem;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 2rem;
+  overflow: auto;
 }
 
 #liveAlertPlaceholder {
@@ -34,11 +48,31 @@ li {
   margin-bottom: 1rem;
 }
 
+.list-group-item {
+  padding: 1rem;
+}
+
+.list-group-item:hover {
+  background-color: var(--hover);
+}
+
+span {
+  font-family: monospace;
+}
+
+.nonexpired {
+  color: var(--positive);
+}
+
+#expire-date {
+  margin-bottom: 1rem;
+}
+
 .active .fa-check-circle:hover {
   color: var(--positive);
 }
 .active .fa-trash:hover {
-  color: red;
+  color: rgb(244, 0, 0);
 }
 
 .inactive span {

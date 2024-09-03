@@ -18,7 +18,7 @@
     <link href="./dist/css/style.css" rel="stylesheet" />
   </head>
   <body>
-    <div id="mainContainer" class="container container-fluid">
+    <div id="mainContainer" class="container container-fluid shadow">
       <div class="row row-cols-1">
         <div class="col">
           <p id="title" class="fs-2 text-center">
@@ -39,27 +39,51 @@
         </div>
         <div class="col">
           <p id="taskTracker" class="fs-5 fw-lighter text-center"></p>
+          <select
+            id="sort-select"
+            name="sortSelect"
+            style="float: right; padding: 0.2rem"
+            id="cars"
+          >
+            <option value="volvo">Alphabetically</option>
+            <option value="saab">Completed First</option>
+            <option value="opel">Pending First</option>
+          </select>
         </div>
+
         <div class="col">
-          <div class="input-group mb-3 shadow">
+          <form id="submit-data">
+            <p class="fs-4 text-center">Input Due Date and Add Task</p>
             <input
-              id="addTaskInput"
-              type="text"
-              class="form-control"
-              placeholder="Add Task"
-              aria-label="AddTask"
-              aria-describedby="button-addtaskInput"
+              class="form-control shadow"
+              type="date"
+              id="expire-date"
+              name="expire-date"
             />
-            <button id="addTaskButton" class="btn btn-primary" type="button">
-              Add Task
-            </button>
-          </div>
+            <div class="input-group mb-3 shadow">
+              <input
+                id="addTaskInput"
+                type="text"
+                class="form-control"
+                placeholder="Add Task"
+                aria-label="AddTask"
+                aria-describedby="button-addtaskInput"
+              />
+              <button id="addTaskButton" class="btn btn-primary" type="submit">
+                Add Task
+              </button>
+            </div>
+          </form>
         </div>
         <div id="taskContainer text-center align-self-center" class="col">
           <ul id="TaskulParent" class="list-group">
             <li class="list-group-item active shadow">
               <i class="fas fa-check-circle fa-lg"></i
               ><i class="fa-solid fa-trash fa-lg"></i>
+              <span style="font-weight: bold" class="nonexpired">
+                Due 2022-10-1</span
+              >
+
               <span class="content">SDFSDF</span>
             </li>
           </ul>
