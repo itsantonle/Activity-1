@@ -62,6 +62,9 @@ function compareDates(date) {
 function displayItems() {
     actualList.innerHTML = '';
     var tasks = JSON.parse(localStorage.getItem('tasks'));
+    if (tasks.length < 1) {
+        actualList.innerHTML = 'No tasks to show!';
+    }
     tasks.sort(function (a, b) { return a.value.localeCompare(b.value); });
     console.log(tasks);
     tasks.forEach(function (task) {
@@ -93,6 +96,7 @@ function displayItems() {
         newLi.appendChild(spanned);
         actualList.appendChild(newLi);
     });
+    setTracker();
 }
 function getTasks() {
     var count = 0;

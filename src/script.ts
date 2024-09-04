@@ -76,6 +76,9 @@ function compareDates(date: string): string {
 function displayItems(): void {
   actualList.innerHTML = ''
   const tasks = JSON.parse(localStorage.getItem('tasks'))
+  if (tasks.length < 1) {
+    actualList.innerHTML = 'No tasks to show!'
+  }
 
   tasks.sort((a: listItem, b: listItem) => a.value.localeCompare(b.value))
   console.log(tasks)
@@ -110,6 +113,7 @@ function displayItems(): void {
     newLi.appendChild(spanned)
     actualList.appendChild(newLi)
   })
+  setTracker()
 }
 function getTasks(): number {
   let count = 0
