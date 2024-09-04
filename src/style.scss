@@ -12,8 +12,8 @@ body {
   background-repeat: no-repeat;
 }
 #mainContainer {
-  max-width: 55%;
-  height: 600px;
+  max-width: 70%;
+  height: 580px;
   margin-top: 5rem;
   padding: 2rem;
   background-color: white;
@@ -61,6 +61,11 @@ span {
 
 .nonexpired {
   color: var(--positive);
+  font-weight: bold;
+}
+.expired {
+  color: red;
+  font-weight: bolder;
 }
 
 #expire-date {
@@ -91,6 +96,10 @@ span {
     animation-duration: 2s;
     animation-delay: -1s;
   }
+}
+
+.hide {
+  display: none;
 }
 
 @keyframes striked {
