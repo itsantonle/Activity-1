@@ -1,11 +1,13 @@
 :root {
   --positive: rgb(13, 255, 13);
   --inactive: rgba(174, 174, 174, 0.938);
-  --primary: rgb(22, 0, 145);
-  --hover: rgb(53, 38, 172);
+  --primary: rgb(81, 121, 149);
+  --hover: rgb(121, 142, 151);
 }
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100vh;
   background: url("https://png.pngtree.com/thumb_back/fh260/background/20200808/pngtree-jungle-background-with-pine-trees-at-sunset-image_387085.jpg");
@@ -15,7 +17,7 @@ body {
 
 #mainContainer {
   max-width: 70%;
-  height: 580px;
+  height: 600px;
   margin-top: 5rem;
   padding: 2rem;
   background-color: white;
